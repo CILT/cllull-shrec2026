@@ -255,6 +255,7 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  width: auto;
   padding: 1rem 0;
 }
 
@@ -433,12 +434,19 @@ code {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition);
-  z-index: 999;
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   box-shadow: var(--shadow-lg);
+}
+
+/* Mobile / tablets */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 5.5rem; /* deja espacio para More Works */
+  }
 }
 
 .scroll-to-top:hover {
@@ -456,7 +464,7 @@ code {
 /* More Works Dropdown */
 .more-works-container {
   position: fixed;
-  top: 2rem;
+  top: 3rem;
   right: 2rem;
   z-index: 1000;
 }
@@ -749,5 +757,91 @@ a:focus {
   }
 }
 
+/* ================================
+   Institutional Top Banner
+================================ */
 
+.institutional-banner {
+  width: 100%;
+  background: linear-gradient(90deg, #f5f5f5, #ffffff);
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.6rem 0;
+}
 
+/* Mobile spacing fix */
+@media (max-width: 768px) {
+  .institutional-banner {
+    padding-left: 1rem;
+    padding-right: 0.7rem;
+  }
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+}
+
+.nvidia-logo {
+  height: 50px;
+  width: auto;
+}
+
+.banner-divider {
+  width: 1px;
+  height: 28px;
+  background-color: #d0d0d0;
+}
+
+.banner-right {
+  display: flex;
+  align-items: center;
+}
+
+.lab-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lab-name {
+    font-size: 0.95rem;
+  }
+
+  .nvidia-logo {
+    height: 40px;
+  }
+}
+
+/* Make the entire banner clickable but clean */
+.banner-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.banner-link:hover .lab-name {
+  color: #165981;
+}
+
+.banner-link:hover .nvidia-logo {
+  transform: scale(1.03);
+}
+
+.nvidia-logo {
+  transition: transform 0.2s ease;
+}
+
+.lab-name {
+  transition: color 0.2s ease;
+}
