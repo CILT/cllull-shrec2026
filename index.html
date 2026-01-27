@@ -284,7 +284,10 @@
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Department of Computer Science - University of Chile, CENIA<br>SHREC 2026: Retrieval of High-Frequency Geometry in Synthetic Heritage</span>
+                    <span class="author-block">
+                      Department of Computer Science - University of Chile</br>
+                      CENIA
+                    </span>
                     <!-- TODO: Remove this line if no equal contribution -->
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
@@ -300,7 +303,21 @@
                         </span>
                         <span>Proposal</span>
                       </a>
-                    </span>
+                      </span>
+
+                      <span class="link-block">
+                        <a href="https://www.kaggle.com/YOUR_DATASET_URL" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-kaggle"></i>
+                        </span>
+                        <span>Dataset</span>
+                      </a>
+                      </span>
+
+                    </div>
+                  </div>
+
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <!-- <span class="link-block">
@@ -529,6 +546,17 @@
             <li><strong>Materials:</strong> Approximated diffuse stone (high roughness, low metallicity).</li>
             <li><strong>Camera Poses:</strong> We provide full camera intrinsics and extrinsics in COLMAP format for every image.</li> 
         </ul>
+
+        <h3 class="title is-4">Geometric Deformations (Derivatives)</h3>
+        <p>
+          To test the robustness of reconstruction algorithms across different topologies, our dataset extends beyond the canonical cube. 
+          We apply a novel deformation method to the four base styles (Normal, Large, Realistic, Wide), resulting in <strong>6 geometric derivatives</strong> for each style.
+        </p>
+        <p>
+          They are complex 3D shapes morphed into the topological semblance of:
+          <strong>Cone, Cylinder, Egg, Package, Pyramid and Sphere</strong>.
+          <!-- TODO: Insert images instead of just the list items -->
+        </p>
 
         <h3 class="title is-4">Evaluation: Semantic Weighting</h3>
         <p>
